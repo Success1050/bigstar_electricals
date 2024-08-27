@@ -13,8 +13,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='fixed top-0 left-0 shadow-lg z-30 w-full backdrop-blur-blurCustom border-b-2 border-gray-400 bg-bgColor1'>
-        <div className='container flex px-4 justify-between items-center h-16 relative'>
+      <nav className='fixed top-0 left-0 shadow-lg z-30 w-full backdrop-blur-blurCustom border-b-2 border-gray-400 bg-bgColor1 py-[15px]'>
+        <div className='container mx-auto flex px-4 justify-between items-center h-16 relative'>
           <Link href='/'>
             <Image
               src='/logo.jpg'
@@ -30,7 +30,7 @@ const Navbar = () => {
                 <Link
                   key={id}
                   href={href}
-                  className='px-6 py-2 text-white capitalize hover:bg-gray-600 hover-text-white motion '
+                  className='px-6 py-4 rounded-[8px] text-white capitalize hover:bg-cusBgCol hover-text-white motion hover:text-black '
                 >
                   {label}
                 </Link>
@@ -39,17 +39,25 @@ const Navbar = () => {
           </div>
           <button
             type='button'
-            className='md:hidden'
+            className='md:hidden text-[20px] text-white'
             onClick={() => setIsOpen(!isOpen)}
           >
             <FaBars />
           </button>
         </div>
         <div
-          className={`md:hidden fixed top-0 left-0 h-screen w-cusWidth6 bg-slate-200 shadow-lg z-cuzindex flex flex-col justify-center items-center space-y-3 transition-all duration-1000 ease-in ${
+          className={`md:hidden fixed top-0 left-0 h-screen w-cusWidth6 bg-cusBgCol2 shadow-lg z-cuzindex flex flex-col justify-start pt-[20px] pl-[20px] items-start text-white  transition-all duration-1000 ease-in ${
             isOpen ? "active" : "left-cusLeft"
           }`}
         >
+          <Link href='/'>
+            <Image
+              src='/logo.jpg'
+              width={74}
+              height={29}
+              className='rounded-md mb-[20px]'
+            />
+          </Link>
           {navLinks.map((link) => {
             const { id, href, label } = link;
             return (
@@ -57,15 +65,15 @@ const Navbar = () => {
                 key={id}
                 href={href}
                 onClick={() => setIsOpen(false)}
-                className='px-6 py-2 hover:bg-gray-600 hover:text-white text-[16px] text-cusBgCol6 text-left rounded-cusBradius4'
+                className=' hover:text-cuscol2 text-[18px] text-cusBgCol6 text-left pt-[16px]'
               >
                 {label}
               </Link>
             );
           })}
-          <div className='absolute top-custop5 right-cusPt text-[16px]' y>
+          <div className='absolute top-[6%]  right-[5%] text-[16px]' y>
             <button type='button' onClick={() => setIsOpen(false)}>
-              <FaTimes />
+              <FaTimes className='text-[20px]' />
             </button>
           </div>
         </div>

@@ -1,37 +1,107 @@
-// import Image from "next/image";
-// import { Paper, Button } from "@mui/material";
-import Link from "next/link";
+"use client";
+
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import Link from "next/link";
+import { MdElectricBolt } from "react-icons/md";
+
+import dynamic from "next/dynamic";
 
 export default function Home() {
   return (
     <>
-      <section
-        className='h-screen bg-cover relative bg-center'
-        style={{ backgroundImage: "url(/banner2.jpg)" }}
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className='mySwiper'
       >
-        <div className='absolute flex justify-center items-center inset-0 flex-col container mx-auto'>
-          <h1 className='text-4xl md:text-4xl font-bold text-white mb-4 text-center md:text-center'>
-            Power the future with Electrical and Mechanical Engineering! From
-            cutting-edge energy solutions to innovative machine design, these
-            dynamic fields fuel the advancements that shape our world.
-          </h1>
-          <p className='text-lg md:text-2xl text-white mb-8 text-center md:text-left'>
-            join us in driving innovation forward
-          </p>
-          <div className='flex flex-col sm:flex-row justify-between items-center gap-x-4'>
-            <button className='border text-white px-6 py-2 rounded-full text-lg md:text-xl hover:bg-cusBtnColor transform  transition-all duration-300 hover:scale-105'>
-              <Link href='/about' className='banner-text-link1'>
-                About Us
-              </Link>
-            </button>
-            <button className='border text-white px-6 py-2 rounded-full text-lg md:text-xl hover:bg-cusBtnColor transform  transition-all duration-300 hover:scale-105'>
-              <Link href='/about' className='banner-text-link1'>
-                Contact Us
-              </Link>
-            </button>
-          </div>
-        </div>
-      </section>
+        <SwiperSlide>
+          {" "}
+          <section
+            className='h-fit bg-cover  bg-center overflow-hidden'
+            style={{ backgroundImage: "url(/banner2.jpg)" }}
+          >
+            <div className='md:w-[50%] py-[50%] sm:py-[20%] w-full flex mx-auto md:ml-[5%] flex-col  font-semibold top-[20%] md:top-[30%] gap-y-7 px-4'>
+              <h2 className='text-cuscol2 text-[18px] md:text-[24px] uppercase font-[500]'>
+                Electrical Solutions Provider
+              </h2>
+              <p className='md:text-[50px] text-[30px] font-semibold text-white'>
+                BigStar Electrical company is here to illuminate your world
+              </p>
+              <p className='text-[20px] text-white w-full'>
+                At Bigstar Electrical and Mechanical company, we pride ourselves
+                on our unwavering commitment to quality. With a team of highly
+                trained and certified electrical engineers, we are dedicated to
+                delivering top-notch electrical solutions for both residential
+                and commercial clients.
+              </p>
+              <button
+                className='w-fit p-4 rounded-8px bg-cusBgCol2 rounded-[50px]  flex justify-between items-center gap-x-2 '
+                type='button'
+              >
+                <h2 className='text-white text-[20px] font-semibold hover:text-cuscol2 transition-all duration-300'>
+                  Contact Us Today
+                </h2>
+
+                <h2 className='w-[50px] h-[5-px] rounded-[50%] flex justify-center items-center bg-cuscol2 p-4'>
+                  <MdElectricBolt />
+                </h2>
+              </button>
+            </div>
+          </section>
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <section
+            className='h-fit bg-cover  bg-center overflow-hidden'
+            style={{ backgroundImage: "url(/banner1.jpg)" }}
+          >
+            <div className='md:w-[50%] py-[50%] sm:py-[20%] w-full flex mx-auto md:ml-[5%] flex-col  font-semibold top-[20%] md:top-[30%] gap-y-7 px-4'>
+              <h2 className='text-cuscol2 text-[18px] md:text-[24px] uppercase font-[500]'>
+                Electrical Solutions Provider
+              </h2>
+              <p className='md:text-[50px] text-[30px] font-semibold text-white'>
+                BigStar Electrical company is here to illuminate your world
+              </p>
+              <p className='text-[20px] text-white w-full'>
+                At Bigstar Electrical and Mechanical company, we pride ourselves
+                on our unwavering commitment to quality. With a team of highly
+                trained and certified electrical engineers, we are dedicated to
+                delivering top-notch electrical solutions for both residential
+                and commercial clients.
+              </p>
+              <button
+                className='w-fit p-4 rounded-8px bg-cusBgCol2 rounded-[50px]  flex justify-between items-center gap-x-2 '
+                type='button'
+              >
+                <h2 className='text-white text-[20px] font-semibold hover:text-cuscol2 transition-all duration-300'>
+                  Contact Us Today
+                </h2>
+
+                <h2 className='w-[50px] h-[5-px] rounded-[50%] flex justify-center items-center bg-cuscol2 p-4'>
+                  <MdElectricBolt />
+                </h2>
+              </button>
+            </div>
+          </section>
+        </SwiperSlide>
+      </Swiper>
+
+      {/* second one */}
 
       <section className='py-12 bg-gray-100'>
         <div className='container mx-auto px-4'>

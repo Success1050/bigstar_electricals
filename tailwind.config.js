@@ -14,10 +14,28 @@ module.exports = {
         customShadow: "0 0 10px rgba(16, 24, 40, .18)",
       },
 
+      //       :root {
+      //     --primary-dark: #0e0e0e;
+      //     --primary: #0b2936;
+      //     --paragraph-gray: #535353;
+      //     --primary-yellow: #cefe02;
+      //     --primary-light: #f2f3ea;
+      //     --light-gray: #799597;
+      //     --radius-large: 32px;
+      //     --dark-gray: #3c5459;
+      //     --white: white;
+      //     --radius-medium: 16px;
+      //     --dark-gray-50: #afafaf80;
+      //     --black\<deleted\|variable-66bd1c0d\>: black;
+      //     --transparent: #fff0;
+      //     --radius-small: 8px;
+      //     --white-50: #ffffff80;
+      // }
+
       backgroundColor: {
-        bgColor1: "rgba(44, 29, 24, 0.8)",
-        cusBgCol: "rgba(234, 88, 12, 1)",
-        cusBgCol2: "rgba(234, 88, 12, 0.3)",
+        bgColor1: "#0b2936",
+        cusBgCol: "#cefe02",
+        cusBgCol2: "#3c5459",
         cusBgCol3: "rgba(32, 26, 26, 0.7)",
         cusBgCol4: "#101828",
         cusBgCol5: "rgba(255, 255, 255, .3)",
@@ -26,10 +44,10 @@ module.exports = {
       },
 
       colors: {
-        cusBtnColor: "rgb(234, 88, 12, 0.8)",
-        cuscolor: "#475467",
-        cusCol2: "rgba(234, 88, 12, 1)",
-        cusBgCol6: "#101828",
+        cuscol: "#0b2936",
+        cuscol2: "#cefe02",
+        cuscol3: "rgba(234, 88, 12, 1)",
+        cuscol4: "#101828",
       },
 
       backdropBlur: {
